@@ -1,62 +1,32 @@
 /* Hello! */
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    min-width: 300px;
-    height: 100%;
+html, body {
+    /* No nonsense */
     padding: 0;
     margin: 0;
 }
 
 body {
-    min-height: 100%;
+    background-color: #333333;
 }
 
-body, .item {
-    padding: 0;
+.grid {
+    /* Make this fill the screen */
     margin: 0;
-}
+    padding: 0;
 
-.row, body {
+    /* CSS Flexbox to the rescue! */
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
-    align-items: stretch;
 }
 
-body {
-    flex-direction: column;
-}
-
-.row {
-    flex-direction: row;
-}
-
-.item {
-    flex-grow: 3;
-    background-color: #eee;
-    height: 40vh;
-}
-
-.spacer {
-    flex-grow: 1;
-}
-
-@media screen and (max-width: 750px) {
-    body {
-        margin-top: 15px;
-    }
-
-    .item {
-        margin-right: 15px;
-        margin-left: 15px;
-        margin-bottom: 15px;
-        height: 30vh;
-    }
-
-    .row {
-        flex-direction: column;
-    }
+.cell {
+    background-color: #111111;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
